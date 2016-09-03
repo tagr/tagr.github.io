@@ -49,11 +49,13 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+@import "projects";
+
 
 .head {
     background: url("../assets/img/bgpoly.jpg") center center no-repeat;
     background-size: cover;
-    border: 3rem dotted rgba(255,255,255,0.1);
+    //border: 3rem dotted rgba(255,255,255,0.1);
     border-left: 0;
     border-right: 0;
     height: 20rem;
@@ -82,15 +84,14 @@ section {
     margin-top: 2rem;
 
     h1 { 
-        background: rgba(48,48,48,1);
         background: rgba(36,36,36,1);
-background: -moz-linear-gradient(top, rgba(36,36,36,1) 0%, rgba(0,0,0,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(36,36,36,1)), color-stop(100%, rgba(0,0,0,1)));
-background: -webkit-linear-gradient(top, rgba(36,36,36,1) 0%, rgba(0,0,0,1) 100%);
-background: -o-linear-gradient(top, rgba(36,36,36,1) 0%, rgba(0,0,0,1) 100%);
-background: -ms-linear-gradient(top, rgba(36,36,36,1) 0%, rgba(0,0,0,1) 100%);
-background: linear-gradient(to bottom, rgba(36,36,36,1) 0%, rgba(0,0,0,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', endColorstr='#000000', GradientType=0 );
+        background: -moz-linear-gradient(top, rgba(36,36,36,1) 0%, rgba(0,0,0,1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(36,36,36,1)), color-stop(100%, rgba(0,0,0,1)));
+        background: -webkit-linear-gradient(top, rgba(36,36,36,1) 0%, rgba(0,0,0,1) 100%);
+        background: -o-linear-gradient(top, rgba(36,36,36,1) 0%, rgba(0,0,0,1) 100%);
+        background: -ms-linear-gradient(top, rgba(36,36,36,1) 0%, rgba(0,0,0,1) 100%);
+        background: linear-gradient(to bottom, rgba(36,36,36,1) 0%, rgba(0,0,0,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', endColorstr='#000000', GradientType=0 );
         border-radius: .4rem;
         padding: 1rem;
 
@@ -109,5 +110,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', end
             font-size: 160%;
             vertical-align: middle;
         }
+    }
+}
+
+.rating {
+    @include breakpoint(medium down) {
+        display: block;
     }
 }

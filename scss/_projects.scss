@@ -1,0 +1,35 @@
+@import 'settings';
+
+.project {
+    background: url("../assets/img/bgpoly.jpg") -600px 0 no-repeat;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    padding: 2rem;
+
+    @include breakpoint(medium down) {
+        background-position: 0 -300px;
+    }
+
+    .material-icons {
+        color: $white;
+    }
+}
+
+.research {
+    @extend .project;
+    background: url("../assets/img/bgpoly.jpg") 0 -50px no-repeat;
+    color: $black;
+
+    @include breakpoint(medium down) {
+        background-position: 0 -100px;
+    }
+
+    h4 {
+        color: $black;
+    }
+
+    .material-icons {
+        color: $black;
+        font-size: 120%;
+    }
+}
