@@ -16,9 +16,17 @@ gulp.task('sass', function() {
     .pipe($.autoprefixer({
       browsers: ['last 2 versions', 'ie >= 9']
     }))
-    .pipe(gulp.dest('css'));
+    .pipe(gulp.dest('css'))
+    .pipe($.livereload());
 });
 
-gulp.task('default', ['sass'], function() {
+gulp.task('html', function() {
+  return gulp.src('index.html')
+    .pipe($.livereload());
+});
+
+gulp.task('default', ['sass', 'html'], function() {
+  $.livereload.listen();
   gulp.watch(['scss/**/*.scss'], ['sass']);
+  gulp.watch(['index.html'], ['html']);
 });

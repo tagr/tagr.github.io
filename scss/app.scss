@@ -1,16 +1,17 @@
 @charset 'utf-8';
-
+@import 'https://fonts.googleapis.com/css?family=News+Cycle:700';
+@import 'iconfont/material-icons.css';
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
 
 @include foundation-global-styles;
 @include foundation-grid;
-// @include foundation-flex-grid;
+@include foundation-flex-grid;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
-// @include foundation-range-input;
+@include foundation-range-input;
 @include foundation-accordion;
 @include foundation-accordion-menu;
 @include foundation-badge;
@@ -30,8 +31,8 @@
 @include foundation-orbit;
 @include foundation-pagination;
 @include foundation-progress-bar;
-// @include foundation-progress-element;
-// @include foundation-meter-element;
+@include foundation-progress-element;
+@include foundation-meter-element;
 @include foundation-slider;
 @include foundation-sticky;
 @include foundation-reveal;
@@ -44,7 +45,69 @@
 @include foundation-top-bar;
 @include foundation-visibility-classes;
 @include foundation-float-classes;
-// @include foundation-flex-classes;
-
+@include foundation-flex-classes;
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+
+.head {
+    background: url("../assets/img/bgpoly.jpg") center center no-repeat;
+    background-size: cover;
+    border: 3rem dotted rgba(255,255,255,0.1);
+    border-left: 0;
+    border-right: 0;
+    height: 20rem;
+
+     h1, p {
+         background: rgba(0,0,0,0.3ch);
+         color: $white;
+         display: inline-block;
+         padding: 1rem;
+     }
+}
+
+.nav {
+    background: rgba(0,0,0,0.1);
+    padding: 1rem;
+}
+
+.menu .material-icons {
+    color: #004b8d;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+section {
+
+    margin-top: 2rem;
+
+    h1 { 
+        background: rgba(48,48,48,1);
+        background: rgba(36,36,36,1);
+background: -moz-linear-gradient(top, rgba(36,36,36,1) 0%, rgba(0,0,0,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(36,36,36,1)), color-stop(100%, rgba(0,0,0,1)));
+background: -webkit-linear-gradient(top, rgba(36,36,36,1) 0%, rgba(0,0,0,1) 100%);
+background: -o-linear-gradient(top, rgba(36,36,36,1) 0%, rgba(0,0,0,1) 100%);
+background: -ms-linear-gradient(top, rgba(36,36,36,1) 0%, rgba(0,0,0,1) 100%);
+background: linear-gradient(to bottom, rgba(36,36,36,1) 0%, rgba(0,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', endColorstr='#000000', GradientType=0 );
+        border-radius: .4rem;
+        padding: 1rem;
+
+        .material-icons {
+            color: $white;
+            font-size: 160%;
+            vertical-align: middle;
+        }
+    }
+    
+    .material-icons {
+        color: #3adb76;
+
+        &.new {
+            color: #FF3963;
+            font-size: 160%;
+            vertical-align: middle;
+        }
+    }
+}
