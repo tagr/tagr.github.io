@@ -49,7 +49,7 @@ $global-font-size: 160%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #2199e8,
+  primary: cyan, //#2199e8,
   secondary: #777,
   success: #3adb76,
   warning: #ffae00,
@@ -61,7 +61,7 @@ $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
 $body-background: #292929;
-$body-font-color: darken($white, 20%);
+$body-font-color: darken($white, 5%);
 $body-font-family: 'News Cycle','Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;

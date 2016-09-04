@@ -10,8 +10,12 @@
         background-position: 0 -300px;
     }
 
+    h2 {
+        font-size: 120%;
+    }
+
     .material-icons {
-        color: $white;
+        color: $black;
     }
 }
 
@@ -24,8 +28,14 @@
         background-position: 0 -100px;
     }
 
-    h4 {
+    h2, p {
+        background: rgba(255,255,255,0.3);
         color: $black;
+        padding: 0.6rem;
+    }
+
+    p {
+        background: rgba(255,255,255,0.4);
     }
 
     .material-icons {
