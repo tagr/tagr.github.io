@@ -3,6 +3,7 @@
 .project {
     background: url("../assets/img/bgpoly.jpg") -600px 0 no-repeat;
     border-radius: 1rem;
+    color: $black;
     margin-bottom: 1rem;
     padding: 2rem;
 
@@ -20,8 +21,7 @@
     }
 
     h2, p {
-        background: rgba(255,255,255,0.3);
-        
+        background: rgba(255,255,255,0.3);     
         padding: 0.6rem;
     }
 
@@ -37,7 +37,6 @@
 .research {
     @extend .project;
     background: url("../assets/img/bgpoly.jpg") 0 -50px no-repeat;
-    color: $black;
 
     @include breakpoint(medium down) {
         background-position: -160px 0;
