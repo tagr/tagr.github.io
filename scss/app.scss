@@ -51,6 +51,10 @@
 
 @import "projects";
 
+* {
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
 
 .head {
     background-image:   
