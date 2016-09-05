@@ -59,11 +59,18 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-left: 0;
-    border-right: 0;
     height: 20rem;
-    //display: table-cell;
-    //vertical-align: middle;
+    // animation-duration: 2s;
+    // animation-name: bg;
+    // animation-iteration-count: 1;
+    @include breakpoint(large up) {
+         animation:  bg 2s 1, 
+                bgparallax 6s infinite;
+    }
+
+    @include breakpoint(medium down) {
+         animation:  bg 2s 1;
+    }
 
      h1, p {
          background: rgba(0,0,0,0.3ch);
@@ -71,6 +78,52 @@
          display: inline-block;
          padding: 1rem;
      }
+}
+
+.am {
+    @include breakpoint(medium up) {
+        animation-duration: 2s;
+        animation-name: beat;
+        animation-iteration-count: 2;
+    }
+}
+
+@keyframes beat {
+  0% {
+    width: 30%; 
+  }
+
+  50% {
+    width: 32%;
+  }
+
+  100% {
+    width: 30%;
+  }
+}
+
+@keyframes bg {
+  from {
+    max-width: 0%;
+  }
+
+  to {
+    max-width: 100%;
+  }
+}
+
+@keyframes bgparallax {
+  0% {
+    background-position: center center;
+  }
+
+  50% {
+    background-position: 0 -300px;
+  }
+
+  0% {
+    background-position: center center;
+  }
 }
 
 .nav {
@@ -82,6 +135,10 @@
     color: #004b8d;
     font-size: 3rem;
     font-weight: 700;
+}
+
+.icon-down {
+    font-size: 360%;
 }
 
 section {

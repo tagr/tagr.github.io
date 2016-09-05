@@ -7,11 +7,26 @@
     padding: 2rem;
 
     @include breakpoint(medium down) {
-        background-position: 0 -300px;
+        //background-position: -600px -200px;
+        background-position: 0 0;
+        background-size: cover;
     }
 
     h2 {
         font-size: 120%;
+        @include breakpoint(medium down) {
+            color: $black;
+        }
+    }
+
+    h2, p {
+        background: rgba(255,255,255,0.3);
+        
+        padding: 0.6rem;
+    }
+
+    p {
+        background: rgba(255,255,255,0.4);
     }
 
     .material-icons {
@@ -25,17 +40,13 @@
     color: $black;
 
     @include breakpoint(medium down) {
-        background-position: 0 -100px;
+        background-position: -160px 0;
     }
 
-    h2, p {
-        background: rgba(255,255,255,0.3);
-        color: $black;
-        padding: 0.6rem;
-    }
-
-    p {
-        background: rgba(255,255,255,0.4);
+    h2 {
+        @include breakpoint(medium up) {
+            color: $black;
+        }
     }
 
     .material-icons {
